@@ -20,7 +20,7 @@ def _not_divisible(n):
 def primes():
     yield 2
     it = _odd_iter()
-    # print(it)  # one element 2 and generator object
+    # print(it)  # one element: 2 and a generator object
     while True:
         n = next(it)
         yield n

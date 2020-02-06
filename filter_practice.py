@@ -1,3 +1,6 @@
+"""
+Filter practice for https://www.liaoxuefeng.com/wiki/1016959663602400/1017404530360000
+"""
 def is_palindrome(n):
     return all(str(n)[i]==str(n)[len(str(n))-1-i] for i in range(int(len(str(n))/2)))
 
