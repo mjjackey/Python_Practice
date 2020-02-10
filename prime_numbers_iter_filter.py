@@ -8,13 +8,21 @@ def main():
         else:
             break
 
+
 def _odd_iter():
+    """
+    Even number ought not be prime number, so omit them
+    """
     n = 1
     while True:
         n = n + 2
         yield n
 
 def _not_divisible(n):
+    """
+    :param n: known number, x is the element of the sequence
+    :return: bool
+    """
     return lambda x: x % n > 0
 
 def primes():
