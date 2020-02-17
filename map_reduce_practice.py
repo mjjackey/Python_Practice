@@ -3,6 +3,9 @@ map reduce practice for https://www.liaoxuefeng.com/wiki/1016959663602400/101732
 """
 from functools import reduce
 
+"""
+1
+"""
 def normalize(name):
     nor_name=""
     if (ord(name[0]) >= 97 and ord(name[0]) <= 122):  # the ascii code of lowercase
@@ -33,7 +36,9 @@ L2= list(map(normalize3,L1))
 print(L2)
 
 
-
+"""
+2
+"""
 def prod(L):
     return reduce(lambda x,y:x*y,L)
 
@@ -44,7 +49,9 @@ else:
     print('测试失败!')
 
 
-
+"""
+3
+"""
 def str2float(s):
     point_len=len(s.split('.')[1])
     def char2num(s):

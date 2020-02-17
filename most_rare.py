@@ -1,6 +1,6 @@
 """
 Based on the given integer n, list, return the element whose  frequency of occurrence
-is equal to n
+is equal to n, the time complexity must less O(nlogn)
 """
 class Rare:
     def nth_most_rare(elements,n):
@@ -12,7 +12,7 @@ class Rare:
             return
         x={}
         for ele in elements:
-            if str(ele) not in x.keys():  # str
+            if str(ele) not in x.keys():  # use str,because ele is a variable
                 x.update({str(ele):1})  # str
             else:
                 x[str(ele)] += 1

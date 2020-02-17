@@ -5,7 +5,13 @@ def generate_prime():
     for num in range(2, n + 1): # the range of candidate numbers
         if all(num % j != 0 for j in range(2, int(math.sqrt(num))+1)):  # Try divide 2 to sqrt(num)
             pri_num_list.append(num)
+
     print(len(pri_num_list),pri_num_list)
+
+def generate_prime1():
+    n=100
+    pri_num_list = [num for num in range(2, n + 1) if all(num % j != 0 for j in range(2, int(math.sqrt(num)) + 1))]
+    print(len(pri_num_list), pri_num_list)
 
 def generate_prime2():
     n = 100
@@ -27,7 +33,9 @@ def generate_prime3():
         flag1 = True
         for j in range(2, int(math.sqrt(num) + 1)): # Try divide 2 to sqrt(num)
             flag2=True
-            ### check whether j is a prime ###
+            ### check whether j is a prime, if j is not a prime, continue,
+            # because if the number can be divided by a not prime, it must can be divided by the prime
+            # number between 2~10 i.e. 2,3,5,7###
             for k in range(2, int(math.sqrt(j) + 1)):
                 if (j % k == 0):
                     flag2 = False # j is not a prime
@@ -44,5 +52,6 @@ def generate_prime3():
     print(len(pri_num_list), pri_num_list)
 
 generate_prime()
+generate_prime1()
 generate_prime2()
 generate_prime3()
