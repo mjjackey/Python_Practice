@@ -10,9 +10,10 @@ def fun():
     out=set()
     for num in input_num_list:
         # if(num !=1 and all(num%i !=0 for i in range(2,int(math.sqrt(num))+1))):
-        #     ##### Return True if all elements of the iterable are true (or if the iterable is empty)
-        #     ##### So, if the input_num_list contain {1}, the result is wrong
-        #     out.add(num)
+        #     ##### all Return True if all elements of the iterable are true (or if the iterable is empty)
+        #     ##### So, if the input_num_list contain {1}, the loop does not do, the result is wrong
+        #     ##### Actually, for num=2 or num=3, inner loop does not do either, but 2,3 are prime
+        # out.add(num)
         flag= True
         for i in range(2,int(math.sqrt(num))+1):
             if (num%i==0):
