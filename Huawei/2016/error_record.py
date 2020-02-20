@@ -15,18 +15,38 @@ Out: 将所有的记录统计并将结果输出，格式：文件名 代码行�
 
 E:\V1R2\product\fpgadrive.c 1325
 fpgadrive.c 1325 1
+
+e:\3\aa1.txt 2
+e:\3\aa1.txt 2
+e:\1\aa3.txt 3
+e:\2\aa2.txt 3
+e:\3\aa1.txt 1
+e:\1\aa1.txt 3
 """
 import collections
+import sys
 
 def fun():
     record = collections.OrderedDict()
+    # record={}
     while True:
         try:
-            # key=input().strip().split('\\')[-1]
-            # print(key)
-            input_line=input().strip().split('\\')
+            ## input_line=input().strip().split()
+            input_line=sys.stdin.readline().strip().split()
             file_name=input_line[0].split('\\')[-1]
             key=str(file_name+(' ')+input_line[1])
+            # print("key:",key)
+
+            ### The below input appear the condition: continuous wait for the input
+            ## key=input().strip().split('\\')[-1]
+            # key=sys.stdin.readline().strip().split('\\')[-1]
+            # print("key:",key)
+
+            # input_line=input().strip()
+            # index =input_line.rfind('\\')
+            # key=input_line[index+1:]
+            # print("key:",key)
+
             if(key not in record):
                 # record.update({key:1})
                 record[key]=1
@@ -37,33 +57,12 @@ def fun():
             break
 
     record_out = sorted(record.items(), key=lambda x: x[1], reverse=True)
+    # print(record_out)
     for k, v in record_out[:min(len(record_out),8)]:
         if (len(k) > 16):
             print(k[-16:], v)
-        else:
+        elif (len(k)<=16 and len(k)>0):
             print(k, v)
-
-
-def fun2():
-    d = collections.OrderedDict()
-    while 1:
-        try:
-            x = raw_input()
-            if not x:
-                break
-            i = x.rfind('\\')
-            q = x[i + 1:]
-            if q in d:
-                d[q] += 1
-            else:
-                d[q] = 1
-        except:
-            break
-    d = d.items()
-    d.sort(key=lambda k: k[1], reverse=True)
-    for i in range(min(len(d), 8)):
-        t = d[i][0].split(' ')
-        print(t[0][-16:], t[1], d[i][1])
 
 if __name__ == "__main__":
     fun()
