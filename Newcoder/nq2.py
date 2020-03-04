@@ -1,7 +1,7 @@
 """
 Find the number of sorted sub-sequence
-1st line: the number of numbers
-2st line: the numbers array
+1st line: the number of numbers, n>=1 and n<=10^5
+2st line: the numbers array, a(i)>=1 and a(i)<=10^9
 In:6
 1 2 3 2 2 1
 Out:2
@@ -47,7 +47,7 @@ def fun2(values):
                 (values[i-1] > values[i] and values[i] < values[i + 1])):
             cnt += 1
             if(i<=len(values)-4):i += 2
-            else: i+=1   #ensure judge whether the 2nd last is peak or though
+            else: i+=1   ########ensure judge whether the 2nd last is peak or though
         else:
             i += 1
     print(cnt)

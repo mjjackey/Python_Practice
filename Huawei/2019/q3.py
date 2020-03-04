@@ -59,9 +59,9 @@ def fun2():
             array_range=int(input().strip())
             input_list=list(map(int,input().strip().split()))
             print(input_list)
-            input_dict={}
+            input_dict={}   ########
             for i in range(array_range):
-                input_dict[i]=input_list[i]
+                input_dict[i]=input_list[i]  ########
             # print(input_dict)
             opr_num=int(input().strip())
             # print(opr_num)
