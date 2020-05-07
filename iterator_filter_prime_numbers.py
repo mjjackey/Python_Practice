@@ -27,10 +27,10 @@ def _not_divisible(n):
 
 def primes():
     yield 2
-    it = _odd_iter()
+    it = _odd_iter()  #### get a generator
     # print(it)  # one element: 2 and a generator object
     while True:
-        n = next(it)
+        n = next(it)  #### keep the whole generator: it
         yield n
         it = filter(_not_divisible(n), it)
 

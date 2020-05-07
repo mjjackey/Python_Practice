@@ -37,6 +37,23 @@ if __name__ == "__main__":
     print("a和b中不同的元素")
     f = set(a).symmetric_difference(set(b))  # a和b中不同的元素
     print(f)
+    print()
+
+    # 定义一个集合
+    set1 = {1, 2, 3, 4, 5}
+    # 或者使用 set 函数
+    list1 = [6, 7, 7, 8, 8, 9]
+    set2 = set(list1)
+    set2.add(10)  # 添加新元素
+    print("set2",set2)  # set([6,7,8,9,10]) 去掉重复内容,
+    set2.update([10,11,12])
+    print("set2", set2)
+    try:
+        set3 = frozenset(list1)  # 固定集合
+        set3.add(10)  # 固定集合不能添加元素
+        print("set3",set3)
+    except:
+        print("error")
 
 
 
