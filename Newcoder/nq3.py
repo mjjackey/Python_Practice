@@ -5,11 +5,11 @@ The 2nd line: 1 ≤ a_i ≤ 10^9
 Output: The number of longest increasing subsequence
 In: 6
 7 2 3 1 5 6
-Output: 5
+Output: 5 - {2 3 1 5 6}
 
 In: 5
 10 3 10 5 7
-Output: 4
+Output: 4 - {3 10 5 7}
 """
 import sys
 def fun(values):

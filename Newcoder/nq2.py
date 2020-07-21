@@ -55,5 +55,5 @@ def fun2(values):
 if __name__ == "__main__":
     n = int(sys.stdin.readline().strip())
     line = sys.stdin.readline().strip()
-    values = list(map(int, line.split()))
+    values = list(map(float, line.split())) ###float
     fun(values)
