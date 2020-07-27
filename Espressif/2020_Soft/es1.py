@@ -40,5 +40,5 @@ def root3(n,num):
     print("%.12f"%mid)
 
 if __name__ == "__main__":
-    num,n=map(int,input().strip().split())
+    num,n=map(float,input().strip().split())  ##### float
     root3(n,num)
