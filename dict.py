@@ -13,6 +13,7 @@ for i in range(len(list_value)):
 print(z)
 
 """
+Purpose: find the the index provided the value 10
 Get the key provided by the value
 for a dictionary, key is the unique, whereas value is not, 
 so dictionary is one vs one, multiple vs one, rather than one vs multiple
@@ -32,7 +33,7 @@ def getKey(dict,value):
 print(getKey(z,10))
 
 """
-This is invalid for the condition the original dictionary is multiple vs one
+This is invalid for the condition that the original dictionary is multiple vs one
 """
 new_dict={v:k for k,v in z.items()}
 print(new_dict[10])

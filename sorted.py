@@ -10,7 +10,7 @@ def by_name(t):
 L1 = sorted(L, key=by_name)
 print(L1)
 
-L1=sorted(L,key=lambda L:L[0])
+L1=sorted(L,key=lambda t:t[0])
 print(L1)
 
 def by_score(t):
@@ -19,5 +19,5 @@ def by_score(t):
 L2 = sorted(L, key=by_score,reverse=True)
 print(L2)
 
-L2= sorted(L,key=lambda L:L[1],reverse=True)
+L2= sorted(L,key=lambda t:t[1],reverse=True)
 print(L2)
