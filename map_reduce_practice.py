@@ -4,7 +4,9 @@ map reduce practice for https://www.liaoxuefeng.com/wiki/1016959663602400/101732
 from functools import reduce
 
 """
-1
+1.
+利用map()函数，把用户输入的不规范的英文名字，变为首字母大写，其他小写的规范名字。
+输入：['adam', 'LISA', 'barT']，输出：['Adam', 'Lisa', 'Bart']：
 """
 def normalize(name):
     nor_name=""
@@ -25,32 +27,18 @@ def normalize2(name):
 def normalize3(name):
     return name[0].upper()+name[1:].lower()
 
-L1 = ['adam', 'LISA', 'barT']
-L2 = list(map(normalize, L1))
-print(L2)
-
-L2 = list(map(normalize2, L1))
-print(L2)
-
-L2= list(map(normalize3,L1))
-print(L2)
-
 
 """
-2
+2. 
+Python提供的sum()函数可以接受一个list并求和，
+请编写一个prod()函数，可以接受一个list并利用reduce()求积：
 """
 def prod(L):
     return reduce(lambda x,y:x*y,L)
 
-print('3 * 5 * 7 * 9 =', prod([3, 5, 7, 9]))
-if prod([3, 5, 7, 9]) == 945:
-    print('测试成功!')
-else:
-    print('测试失败!')
-
-
 """
-3
+3. 
+利用map和reduce编写一个str2float函数，把字符串'123.456'转换成浮点数123.456
 """
 def str2float(s):
     point_len=len(s.split('.')[1])
@@ -88,14 +76,34 @@ def str2float2(s):
             return f + n / point
     return reduce(to_float, nums, 0.0)
 
-print('str2float(\'123.456\') =', str2float('123.456'))
-if abs(str2float('123.456') - 123.456) < 0.00001:
-    print('测试成功!')
-else:
-    print('测试失败!')
+if __name__ == "__main__":
+    # 1.
+    L1 = ['adam', 'LISA', 'barT']
+    L2 = list(map(normalize, L1))
+    print(L2)
 
-print('str2float(\'123.456\') =', str2float2('123.456'))
-if abs(str2float2('123.456') - 123.456) < 0.00001:
-    print('测试成功!')
-else:
-    print('测试失败!')
+    L2 = list(map(normalize2, L1))
+    print(L2)
+
+    L2 = list(map(normalize3, L1))
+    print(L2)
+
+    # 2.
+    print('3 * 5 * 7 * 9 =', prod([3, 5, 7, 9]))
+    if prod([3, 5, 7, 9]) == 945:
+        print('测试成功!')
+    else:
+        print('测试失败!')
+
+    # 3.
+    print('str2float(\'123.456\') =', str2float('123.456'))
+    if abs(str2float('123.456') - 123.456) < 0.00001:
+        print('测试成功!')
+    else:
+        print('测试失败!')
+
+    print('str2float(\'123.456\') =', str2float2('123.456'))
+    if abs(str2float2('123.456') - 123.456) < 0.00001:
+        print('测试成功!')
+    else:
+        print('测试失败!')

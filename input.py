@@ -18,3 +18,6 @@ def fun2():
             ans += v
     print(ans)
 
+if __name__ == "__main__":
+    fun1()
+    fun2()

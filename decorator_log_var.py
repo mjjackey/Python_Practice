@@ -29,5 +29,6 @@ def f1():
 def f2():
     print("has parameter")
 
-f1()
-f2()
+if __name__ == "__main__":
+    f1()
+    f2()

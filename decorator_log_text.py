@@ -22,4 +22,5 @@ def log(text1, text2):
 def now():
     print(time.time())
 
-now()
+if __name__ == "__main__":
+    now()

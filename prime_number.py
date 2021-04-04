@@ -54,7 +54,8 @@ def generate_prime3():
             pri_num_list.append(num)
     print(len(pri_num_list), pri_num_list)
 
-generate_prime()
-generate_prime1()
-generate_prime2()
-generate_prime3()
+if __name__ == "__main__":
+    generate_prime()
+    generate_prime1()
+    generate_prime2()
+    generate_prime3()

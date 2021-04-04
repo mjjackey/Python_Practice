@@ -20,11 +20,12 @@ class Rare:
         element=list(x.keys())[list(x.values()).index(n+1)]
         return element
 
-n=Rare.nth_most_rare([5,4,3,2,1,5,4,3,2,5,4,3,5,4,5],4)
-print(n)
+if __name__ == "__main__":
+    n=Rare.nth_most_rare([5,4,3,2,1,5,4,3,2,5,4,3,5,4,5],4)
+    print(n)
 
-n=Rare.nth_most_rare((5,4,3,2,1,5,4,3,2,5,4,3,5,4,5),4)
-print(n)
+    n=Rare.nth_most_rare((5,4,3,2,1,5,4,3,2,5,4,3,5,4,5),4)
+    print(n)
 
-n=Rare.nth_most_rare([5,4,3,2,1,5,4,3,2,5,4,3,5,4,5],4.5)
-print(n)
+    n=Rare.nth_most_rare([5,4,3,2,1,5,4,3,2,5,4,3,5,4,5],4.5)
+    print(n)
