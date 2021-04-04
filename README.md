@@ -13,5 +13,5 @@ high order features and functional programming, i.e.
 - lambda
 - decorator
 
-In addition, this practice contains some coding tests for some companies.
+In addition, this practice contains some coding tests for some companies
 and some data-structures and algorithms. 
