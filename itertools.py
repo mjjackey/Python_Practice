@@ -2,10 +2,10 @@
 from itertools import batched
 numbers: list[int]=[1,2,3,4,5,6,7]
 my_batch: batched=batched(numbers,n=3)
-print(list(my_batch))
+print(list(my_batch)) # [(1, 2, 3), (4, 5, 6), (7,)]
 my_batch2: batched=batched(numbers,n=2)
-print(next(my_batch2))
-print(next(my_batch2))
+print(next(my_batch2)) # (1, 2)
+print(next(my_batch2)) #(3, 4)
 
 #2. zip_longest()
 from itertools import zip_longest

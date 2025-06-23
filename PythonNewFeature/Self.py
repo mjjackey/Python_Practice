@@ -7,7 +7,6 @@ class Animal:
     def clone(self) -> Self:  # 返回类型是当前类或其子类
         return type(self)(self.name)
 
-class Dog(Animal):
     def bark(self) -> str:
         return "Woof!"
 
