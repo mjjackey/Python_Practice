@@ -20,16 +20,16 @@ def fun(values):
     state=0
     cnt=1 #######
     for i in range(len(values)-1):
-        if(values[i]< values[i+1]): #### exclude"="
-            if (state == 0):
+        if values[i]< values[i+1]: #### exclude"="
+            if state == 0:
                 state = 1
-            elif (state == -1):  # state shift, then count number, so there is a previous sorted sub array
+            elif state == -1:  # state shift, then count number, so there is a previous-sorted sub array
                 cnt += 1
                 state = 0
-        elif (values[i]>values[i+1]):
-            if (state == 0):
+        elif values[i]>values[i+1]:
+            if state == 0:
                 state = -1
-            elif (state == 1):  # state shift, then count number, so there is a previous sorted sub array
+            elif state == 1:  # state shift, then count number, so there is a previous-sorted sub array
                 cnt += 1
                 state = 0
     print(cnt)
@@ -42,11 +42,11 @@ def fun2(values):
     """
     cnt=1
     i=1
-    while (i <= len(values) - 2):
+    while i <= len(values) - 2:
         if (values[i-1] < values[i] and values[i] > values[i + 1] or
-                (values[i-1] > values[i] and values[i] < values[i + 1])):
+                values[i-1] > values[i] and values[i] < values[i + 1]):
             cnt += 1
-            if(i<=len(values)-4):i += 2
+            if i<=len(values)-4 :i += 2
             else: i+=1   ########ensure judge whether the 2nd last is peak or though
         else:
             i += 1

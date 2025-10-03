@@ -15,22 +15,22 @@ import sys
 def fun(values):
     i = 1
     record=[]
-    while (i <= len(values) - 2):
+    while i <= len(values) - 2:
         if(values[i - 1] > values[i] and values[i] < values[i + 1] or  ### through of wave
-          (values[i-1] < values[i] and values[i] > values[i + 1])):   ### peak of wave
-            if (values[i + 1] >= values[i - 1]): ######### right > left
+          values[i-1] < values[i] and values[i] > values[i + 1]):   ### peak of wave
+            if values[i + 1] >= values[i - 1]: ######### right > left
                 j = i - 1
-                while(j>=1 and values[j-1]<=values[j]): # find left longest subsequence
+                while j>=1 and values[j - 1]<=values[j]: # find left the longest subsequence
                     j=j-1
 
                 k=i+2
-                while (k <= len(values) - 1 and values[k] >= values[k - 1]): # find right longest subsequence
+                while k <= len(values) - 1 and values[k] >= values[k - 1]: # find right longest subsequence
                     k+= 1
 
-                if(len(record)==0):record.append((j,k-j))  ####for the subsequence: subscript is j, superscript is k-1
+                if len(record)==0:record.append((j, k - j))  ####for the subsequence: subscript is j, superscript is k-1
                 else:
                     s_index,s_len=record[0]
-                    if(k-j>s_len): record[0]=(j,k-j)
+                    if k-j>s_len: record[0]=(j, k - j)
 
         i+=1 ################# check each element, rather than check continuous 3 elements
 
